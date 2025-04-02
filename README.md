@@ -1,2 +1,81 @@
 # Capasitacion
 Pagina capasitacion
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitación para Conductores</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .module { border: 2px solid #333; padding: 20px; margin: 20px; border-radius: 10px; }
+        button { padding: 10px; margin: 10px; cursor: pointer; }
+        img { width: 80%; max-width: 500px; margin-top: 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Capacitación para Conductores</h1>
+    <p>Bienvenido al curso de capacitación para conductores. En esta plataforma aprenderás sobre seguridad vial, prevención de fatiga, mantenimiento del vehículo y optimización de rutas. Responde las preguntas al final de cada módulo para evaluar tu aprendizaje.</p>
+    
+    <div class="module" id="modulo1">
+        <h2>Seguridad Vial</h2>
+        <p>Conducir con seguridad es fundamental para evitar accidentes y proteger la vida de todos en la vía. En este módulo aprenderás sobre las normas básicas de tránsito y la importancia de mantener una distancia segura entre vehículos.</p>
+        <img src="https://example.com/seguridad_vial.jpg" alt="Seguridad Vial">
+        <h3>Preguntas</h3>
+        <p>¿Cuál es la distancia mínima de seguridad entre vehículos a 80 km/h?</p>
+        <button onclick="verificarRespuesta('modulo1', 'B')">A) 10 metros</button>
+        <button onclick="verificarRespuesta('modulo1', 'correcto')">B) 40 metros</button>
+        <button onclick="verificarRespuesta('modulo1', 'C')">C) 5 metros</button>
+        <p id="resultado1"></p>
+    </div>
+    
+    <div class="module" id="modulo2">
+        <h2>Fatiga y Prevención de Accidentes</h2>
+        <p>La fatiga al volante es una de las principales causas de accidentes. En este módulo descubrirás cómo identificar los signos de cansancio y qué medidas tomar para prevenir accidentes por somnolencia.</p>
+        <img src="https://example.com/fatiga_conduccion.jpg" alt="Fatiga y Conducción">
+        <h3>Preguntas</h3>
+        <p>¿Cada cuántas horas de conducción se recomienda hacer una pausa?</p>
+        <button onclick="verificarRespuesta('modulo2', 'correcto')">A) Cada 2 horas</button>
+        <button onclick="verificarRespuesta('modulo2', 'B')">B) Cada 5 horas</button>
+        <button onclick="verificarRespuesta('modulo2', 'C')">C) Solo cuando se sienta cansado</button>
+        <p id="resultado2"></p>
+    </div>
+    
+    <div class="module" id="modulo3">
+        <h2>Mantenimiento del Vehículo</h2>
+        <p>Un vehículo en buen estado es clave para la seguridad en la carretera. Este módulo cubre las revisiones esenciales que debes hacer regularmente para mantener tu vehículo en óptimas condiciones.</p>
+        <img src="https://example.com/mantenimiento.jpg" alt="Mantenimiento del Vehículo">
+        <h3>Preguntas</h3>
+        <p>¿Cada cuánto se debe revisar la presión de los neumáticos?</p>
+        <button onclick="verificarRespuesta('modulo3', 'A')">A) Cada 3 meses</button>
+        <button onclick="verificarRespuesta('modulo3', 'correcto')">B) Cada semana</button>
+        <button onclick="verificarRespuesta('modulo3', 'C')">C) Solo antes de un viaje largo</button>
+        <p id="resultado3"></p>
+    </div>
+    
+    <div class="module" id="modulo4">
+        <h2>Optimización de Rutas</h2>
+        <p>Planificar bien las rutas de transporte ayuda a reducir costos y mejorar la eficiencia del servicio. En este módulo aprenderás estrategias para optimizar tus recorridos.</p>
+        <img src="https://example.com/rutas_optimas.jpg" alt="Optimización de Rutas">
+        <h3>Preguntas</h3>
+        <p>¿Qué factor influye más en la eficiencia del transporte?</p>
+        <button onclick="verificarRespuesta('modulo4', 'A')">A) La velocidad máxima</button>
+        <button onclick="verificarRespuesta('modulo4', 'correcto')">B) La planificación de rutas</button>
+        <button onclick="verificarRespuesta('modulo4', 'C')">C) El uso de combustible</button>
+        <p id="resultado4"></p>
+    </div>
+    
+    <script>
+        function verificarRespuesta(modulo, respuesta) {
+            let resultado = document.getElementById("resultado" + modulo.slice(-1));
+            if (respuesta === 'correcto') {
+                resultado.innerHTML = "✅ Respuesta correcta.";
+                resultado.style.color = "green";
+            } else {
+                resultado.innerHTML = "❌ Respuesta incorrecta. Intenta de nuevo.";
+                resultado.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
