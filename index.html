@@ -1,79 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitación para Conductores</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        .module { border: 2px solid #333; padding: 20px; margin: 20px; border-radius: 10px; }
-        button { padding: 10px; margin: 10px; cursor: pointer; }
-        img { width: 80%; max-width: 500px; margin-top: 10px; border-radius: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1: Concientización – El cuerpo necesita descanso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.8;
+      padding: 20px;
+      background: url('https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2016/09/batalla-contra-la-fatiga-9-759x500.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+    h1, h2, h3 {
+      color: #ffe600;
+    }
+    .section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .question {
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #ffe600;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #ffd000;
+    }
+  </style>
 </head>
 <body>
-    <h1>Capacitación para Conductores</h1>
-    <p>Bienvenido al curso de capacitación para conductores. En esta plataforma aprenderás sobre seguridad vial, prevención de fatiga, mantenimiento del vehículo y optimización de rutas. Responde las preguntas al final de cada módulo para evaluar tu aprendizaje.</p>
-    
-    <div class="module" id="modulo1">
-        <h2>Seguridad Vial</h2>
-        <p>Conducir con seguridad es fundamental para evitar accidentes y proteger la vida de todos en la vía. En este módulo aprenderás sobre las normas básicas de tránsito y la importancia de mantener una distancia segura entre vehículos.</p>
-        <img src="https://carga.com.co/tipos-de-camiones-que-se-pueden-encontrar-en-las-carreteras-de-colombia/" alt="Seguridad Vial">
-        <h3>Preguntas</h3>
-        <p>¿Cuál es la distancia mínima de seguridad entre vehículos a 80 km/h?</p>
-        <button onclick="verificarRespuesta('modulo1', 'B')">A) 10 metros</button>
-        <button onclick="verificarRespuesta('modulo1', 'correcto')">B) 40 metros</button>
-        <button onclick="verificarRespuesta('modulo1', 'C')">C) 5 metros</button>
-        <p id="resultado1"></p>
-    </div>
-    
-    <div class="module" id="modulo2">
-        <h2>Fatiga y Prevención de Accidentes</h2>
-        <p>La fatiga al volante es una de las principales causas de accidentes. En este módulo descubrirás cómo identificar los signos de cansancio y qué medidas tomar para prevenir accidentes por somnolencia.</p>
-        <img src="https://example.com/fatiga_conduccion.jpg" alt="Fatiga y Conducción">
-        <h3>Preguntas</h3>
-        <p>¿Cada cuántas horas de conducción se recomienda hacer una pausa?</p>
-        <button onclick="verificarRespuesta('modulo2', 'correcto')">A) Cada 2 horas</button>
-        <button onclick="verificarRespuesta('modulo2', 'B')">B) Cada 5 horas</button>
-        <button onclick="verificarRespuesta('modulo2', 'C')">C) Solo cuando se sienta cansado</button>
-        <p id="resultado2"></p>
-    </div>
-    
-    <div class="module" id="modulo3">
-        <h2>Mantenimiento del Vehículo</h2>
-        <p>Un vehículo en buen estado es clave para la seguridad en la carretera. Este módulo cubre las revisiones esenciales que debes hacer regularmente para mantener tu vehículo en óptimas condiciones.</p>
-        <img src="https://example.com/mantenimiento.jpg" alt="Mantenimiento del Vehículo">
-        <h3>Preguntas</h3>
-        <p>¿Cada cuánto se debe revisar la presión de los neumáticos?</p>
-        <button onclick="verificarRespuesta('modulo3', 'A')">A) Cada 3 meses</button>
-        <button onclick="verificarRespuesta('modulo3', 'correcto')">B) Cada semana</button>
-        <button onclick="verificarRespuesta('modulo3', 'C')">C) Solo antes de un viaje largo</button>
-        <p id="resultado3"></p>
-    </div>
-    
-    <div class="module" id="modulo4">
-        <h2>Optimización de Rutas</h2>
-        <p>Planificar bien las rutas de transporte ayuda a reducir costos y mejorar la eficiencia del servicio. En este módulo aprenderás estrategias para optimizar tus recorridos.</p>
-        <img src="https://example.com/rutas_optimas.jpg" alt="Optimización de Rutas">
-        <h3>Preguntas</h3>
-        <p>¿Qué factor influye más en la eficiencia del transporte?</p>
-        <button onclick="verificarRespuesta('modulo4', 'A')">A) La velocidad máxima</button>
-        <button onclick="verificarRespuesta('modulo4', 'correcto')">B) La planificación de rutas</button>
-        <button onclick="verificarRespuesta('modulo4', 'C')">C) El uso de combustible</button>
-        <p id="resultado4"></p>
-    </div>
-    
-    <script>
-        function verificarRespuesta(modulo, respuesta) {
-            let resultado = document.getElementById("resultado" + modulo.slice(-1));
-            if (respuesta === 'correcto') {
-                resultado.innerHTML = "✅ Respuesta correcta.";
-                resultado.style.color = "green";
-            } else {
-                resultado.innerHTML = "❌ Respuesta incorrecta. Intenta de nuevo.";
-                resultado.style.color = "red";
-            }
-        }
-    </script>
+
+  <h1>Módulo 1: Concientización – El cuerpo necesita descanso</h1>
+
+  <div class="section">
+    <h2>¿Qué es la fatiga al volante?</h2>
+    <p>La fatiga al volante es una condición peligrosa que ocurre cuando una persona conduce estando física o mentalmente agotada. Este estado compromete seriamente el tiempo de reacción, la concentración, la coordinación motora y la capacidad para tomar decisiones correctas. No solo implica quedarse dormido, sino también conducir en modo automático, donde el conductor no recuerda los últimos kilómetros recorridos. Es una de las principales causas invisibles de accidentes graves.</p>
+  </div>
+
+  <div class="section">
+    <h2>Estadísticas de accidentes por microsueño</h2>
+    <p>Estudios revelan que hasta el 20% de los accidentes graves de tráfico tienen como causa directa la fatiga o el microsueño. El microsueño puede durar apenas unos segundos, pero eso es suficiente para recorrer decenas de metros sin control del vehículo. Por ejemplo, a 100 km/h, 5 segundos de microsueño representan más de 130 metros recorridos a ciegas. Estos eventos ocurren con mayor frecuencia en la madrugada (2 a 6 a.m.) y después del almuerzo (2 a 4 p.m.), cuando el cuerpo naturalmente entra en fases de somnolencia.</p>
+  </div>
+
+  <div class="section">
+    <h2>Señales de alerta del cuerpo</h2>
+    <ul>
+      <li>Sensación de pesadez en los párpados o visión borrosa.</li>
+      <li>Parpadeo lento y frecuente.</li>
+      <li>Cabeceo involuntario del cuello hacia adelante.</li>
+      <li>Desconexión: no recordar los últimos kilómetros recorridos.</li>
+      <li>Dificultad para mantener el vehículo en línea recta o cambiar de carril sin razón.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Alternativas antes de conducir cansado</h2>
+    <ul>
+      <li>Dormir entre 7 y 9 horas antes de realizar trayectos largos.</li>
+      <li>Realizar pausas de descanso de 15 a 30 minutos cada 2 horas de manejo continuo.</li>
+      <li>Utilizar áreas de descanso, estaciones de servicio o moteles para dormir si es necesario.</li>
+      <li>Evitar conducir durante los horarios biológicamente críticos para el cuerpo.</li>
+      <li>Si notas señales de fatiga, no te obligues a continuar: detente y descansa.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Testimonios y videos impactantes</h2>
+    <p>Los relatos de personas que han vivido accidentes por fatiga son poderosos. Muchos cuentan cómo se quedaron dormidos sin darse cuenta, y despertaron con su vehículo fuera del camino o tras haber provocado una colisión. Ver videos grabados por cámaras de seguridad donde se ve a los conductores cabeceando antes de un choque también puede impactar profundamente. Estas historias reales nos recuerdan que nadie está exento del riesgo.</p>
+  </div>
+
+  <h2>Evaluación del módulo</h2>
+  <form id="quizForm">
+    <!-- PREGUNTAS (SIN CAMBIOS) -->
+  </form>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    function calcularPuntaje() {
+      const form = document.getElementById('quizForm');
+      const data = new FormData(form);
+      let score = 0;
+      for (let value of data.values()) {
+        score += parseInt(value);
+      }
+      document.getElementById('resultado').textContent = `Tu puntaje es: ${score} de 7`;
+    }
+  </script>
+
 </body>
 </html>
